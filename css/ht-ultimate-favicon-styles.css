@@ -1,0 +1,85 @@
+body {
+	
+}
+
+.favicon-display {
+	float: left;
+}
+
+.favicon-control {
+	text-align: center;
+	width: 150px;
+	margin-left: 10px;
+	position: relative;
+	top: 195px;
+}
+
+#ht-select-favicon {
+	left: 10px;
+}
+
+#ht-clear-favicon {
+	left: 20px;
+}
+
+.preview-favicon {
+
+	width: 100%;
+}
+
+.preview-favicon-main {
+	height: 228px;
+	width: 100%;
+}
+
+.preview-favicon-image {
+	background-color: white;
+	height: 228px;
+	width: 228px;
+	position: relative;
+	border: 2px solid black;
+	float: left;
+}
+
+.preview-favicon-image img.centered {
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.preview-favicon-image .ht-not-generated {
+	margin: auto;
+  	position: absolute;
+  	margin: 10px;
+}
+
+.preview-favicon-title h3 {
+	font-size: 20px;
+	padding: 3px;
+	width: 80%;
+	border-bottom: 2px solid black;
+}
+
+.replace-generated{
+	position: relative;
+	top: 190px;
+	left: 10px;
+}
+
+.restore-generated{
+	position: relative;
+	top: 190px;
+	left: 20px;
+}
+
+.favicon-override-id{
+	display: none;
+}
+
+.favicon-enabled{
+	position: relative;
+	top: 10px;
+	left: 20px;
+}
+
+
