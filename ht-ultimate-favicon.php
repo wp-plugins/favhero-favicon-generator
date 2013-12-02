@@ -4,7 +4,7 @@
 *	Plugin URI: http://wordpress.org/extend/plugins/ht-ultimate-favicon/
 *	Description: The Ultimate Favicon tool for WordPress
 *	Author: Hero Themes
-*	Version: 1.1.2
+*	Version: 1.2
 *	Author URI: http://www.herothemes.com/
 *	Text Domain: ht-ultimate-favicon
 */
@@ -30,7 +30,7 @@ if( !class_exists( 'HT_Ultimate_Favicon' ) ){
 		function echo_favicons(){
 			$favicon_set = get_option( HT_ULTIMATE_FAVICONS_OPTION_KEY );
 			echo '<!-- FAVHERO FAVICON START -->';
-			//generate array(16,32,48,57,72,96,120,128,144,152,195,228, 230);
+			//16,32,48,57,72,96,120,128,144,152,195,228, 230
 			if($favicon_set){
 				foreach ($favicon_set as $key => $value) {
 					switch($key) {

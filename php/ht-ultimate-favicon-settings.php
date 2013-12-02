@@ -28,6 +28,8 @@ class HT_Ultimate_Favicon_Settings_Page {
                 '195' => 'Opera Speed Dial icon',
                 '228' => 'Opera Coast icon'
             );
+
+        $this->options  = array();
     }
 
     /**
@@ -113,7 +115,7 @@ class HT_Ultimate_Favicon_Settings_Page {
         if($this->icon_set){
             foreach ($this->icon_set as $icon_key => $icon_path) {
                 //if enabled, set the path
-                if( array_key_exists($icon_key, $this->options['enabled'] ) ){                    
+                if( is_array($this->options['enabled']) && array_key_exists($icon_key, $this->options['enabled'] ) ){                    
                     $icon_urls[$icon_key] = $this->urlFromFilePath( $icon_path );
                 }
             }
@@ -177,7 +179,7 @@ class HT_Ultimate_Favicon_Settings_Page {
 
         add_settings_section(
             'preview_favicon', 
-            __( 'Preview' , 'ht-ultimate-favicon'),
+            __( 'Previews' , 'ht-ultimate-favicon'),
             array( $this, 'print_preview_selection_info' ), 
             'ht-ultimate-favicon-options' 
         );        
@@ -224,9 +226,10 @@ class HT_Ultimate_Favicon_Settings_Page {
         } else {
             echo '<img src="' . plugins_url( 'img/favicon-default.png' , dirname(__FILE__) ) . '" class="favicon-display favicon-default"/>';
         }
-
+        echo '<div class="preview-favicon-main-buttons">';
         echo '<a href="#" id="ht-select-favicon" class="button button-large button-primary favicon-control">' . __( 'Select Favicon', 'ht-ultimate-favicon') . '</a>';
         echo '<a href="#" id="ht-clear-favicon" class="button button-large button-secondary favicon-control">' . __( 'Clear Favicon', 'ht-ultimate-favicon') . '</a>';
+        echo '</div> <!-- preview-favicon-main-buttons -->';
         echo '</div> <!-- preview-favicon-main -->';
     }
 
@@ -280,11 +283,12 @@ class HT_Ultimate_Favicon_Settings_Page {
      */
     public function print_preview_selection_info() {
         //var_dump( $this->icon_set );   
-        _e('Preview Favicon', 'ht-ultimate-favicon' );
+        //_e('Preview Favicon', 'ht-ultimate-favicon' );
+        echo '<ul class="preview-items-list">';
         foreach ($this->sizes as $key => $description) {
             $this->preview_image($key, $description);
         }
-
+        echo '</ul>';
         echo '<br/>';
         
     }
@@ -298,8 +302,8 @@ class HT_Ultimate_Favicon_Settings_Page {
         $current_ico = array_key_exists($index, $this->icon_set) ? $this->icon_set[$index] : null;
         $preview_url = ( $index=='ico' && $this->options['overrides']['ico']==null ) ? $this->icon_set['32'] : $current_ico ;
         $preview_url = !empty($preview_url) ? $this->urlFromFilePath( $preview_url ) : null;
-        echo '<div class="preview-favicon">';        
-        echo '<br/><br/>';         
+        echo '<li class="preview-item">';
+        echo '<div class="preview-favicon">';                 
         echo '<div class="preview-favicon-title">';
         echo '<h3>' . $description . ' ' . $sizes . '</h3>';
         echo '</div> <!-- preview-favicon-title -->';
@@ -317,7 +321,7 @@ class HT_Ultimate_Favicon_Settings_Page {
         echo '<a href="#" class="button button-secondary restore-generated" data-id="' . $index . '">' . __( 'Restore Generated Image', 'ht-ultimate-favicon' ) . '</a>';
         echo '</div> <!-- preview-favicon-main -->';
         echo '</div> <!-- preview-favicon -->';
-        echo '<br/>';
+        echo '</li>';
     }
 
     /**

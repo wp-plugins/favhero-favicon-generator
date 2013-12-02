@@ -40,9 +40,15 @@ A. No worries, simply ask on the support section on WordPress.org.
 
 == Screenshots ==
 
+1. Favicon Settings Page.
 
+2. How favicons appear in Chrome
 
 == Changelog ==
+
+= 1.2 =
+
+New UI
 
 = 1.1.2 =
 
