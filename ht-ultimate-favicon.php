@@ -1,10 +1,10 @@
 <?php
 /*
-*	Plugin Name: FavHero - Favicon Generator
+*	Plugin Name: Heroic Favicon Generator
 *	Plugin URI: http://wordpress.org/extend/plugins/ht-ultimate-favicon/
 *	Description: The Ultimate Favicon tool for WordPress
 *	Author: Hero Themes
-*	Version: 1.2
+*	Version: 1.3
 *	Author URI: http://www.herothemes.com/
 *	Text Domain: ht-ultimate-favicon
 */

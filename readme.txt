@@ -1,26 +1,26 @@
-=== FavHero - Favicon Generator ===
+=== Heroic Favicon Generator ===
 Contributors: herothemes
 Tags: favicon, icon, favourites, generator
 Requires at least: 3.5
-Tested up to: 3.7.1
-Stable tag: 1.2
+Tested up to: 3.8
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-FavHero is your one-click favicon generator for WordPress.
+Heroic Favicon Generator is your one-click favicon generator for WordPress.
 
 == Description ==
 
-Install favicons in a flash with FavHero. FavHero generates automatically generates favicons using images from you upload or select from the media gallery. Support is provided for all modern favicons and automatic generation of the cross-compatible .ico with multiple embeded sizes.
+Install favicons in a flash with Heroic Favicon Generator. This pugin generates automatically generates favicons using images from you upload or select from the media gallery. Support is provided for all modern favicons and automatic generation of the cross-compatible .ico with multiple embeded sizes.
 
 
 == Installation ==
 
 It's easy to get started
 
-1. Upload `ht-ultimate-favicon` to the `/wp-content/plugins/` directory or goto Plugins>Add New and search for FavHero.
+1. Upload `ht-ultimate-favicon` to the `/wp-content/plugins/` directory or goto Plugins>Add New and search for Heroic Favicon Generator.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Select Settings>FavHero Favicons.
+3. Select Settings>Heroic Favicon Generator.
 4. Upload or select your favicon by clicking Select Favicon.
 
 == Frequently Asked Questions ==

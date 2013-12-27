@@ -39,7 +39,7 @@ class HT_Ultimate_Favicon_Settings_Page {
         // This page will be under "Settings"
         add_options_page(
             'Settings Admin', 
-            __( 'FavHero Favicons' , 'ht-ultimate-favicon' ), 
+            __( 'Heroic Favicon Generator' , 'ht-ultimate-favicon' ), 
             'manage_options', 
             'ht-ultimate-favicon-options', 
             array( $this, 'create_admin_page' )
@@ -94,7 +94,7 @@ class HT_Ultimate_Favicon_Settings_Page {
         ?>
         <div class="wrap">
             <?php screen_icon(); ?>
-            <h2><?php _e( 'FavHero Favicon Settings' , 'ht-ultimate-favicon'); ?></h2>           
+            <h2><?php _e( 'Heroic Favicon Generator Settings' , 'ht-ultimate-favicon'); ?></h2>           
             <form method="post" id="ht-ultimate-favicon-form" action="options.php">
             <?php
                 // This prints out all hidden setting fields
