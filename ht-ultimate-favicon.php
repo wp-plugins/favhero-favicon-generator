@@ -4,7 +4,7 @@
 *	Plugin URI: http://wordpress.org/extend/plugins/ht-ultimate-favicon/
 *	Description: The Ultimate Favicon tool for WordPress
 *	Author: Hero Themes
-*	Version: 1.3
+*	Version: 1.4
 *	Author URI: http://www.herothemes.com/
 *	Text Domain: ht-ultimate-favicon
 */
@@ -20,6 +20,8 @@ if( !class_exists( 'HT_Ultimate_Favicon' ) ){
 		* Constructor
 		*/
 		function __construct(){
+			load_plugin_textdomain('ht-ultimate-favicon', false, basename( dirname( __FILE__ ) ) . '/languages' );
+			
 			include_once( 'phpthumb/phpthumb.functions.php' );
 			include_once( 'phpthumb/phpthumb.ico.php' );
 			include_once( 'php/ht-ultimate-favicon-settings.php' );

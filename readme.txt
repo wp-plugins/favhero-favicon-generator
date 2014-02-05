@@ -2,8 +2,8 @@
 Contributors: herothemes
 Tags: favicon, icon, favourites, generator
 Requires at least: 3.5
-Tested up to: 3.8
-Stable tag: 1.3
+Tested up to: 3.8.1
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ A. No worries, simply ask on the support section on WordPress.org.
 2. How favicons appear in Chrome
 
 == Changelog ==
+
+= 1.4 =
+
+Fixed issue with ssl support
+
+= 1.3 = 
+
+Added translation files
 
 = 1.2 =
 

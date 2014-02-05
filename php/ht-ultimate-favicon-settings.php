@@ -135,7 +135,7 @@ class HT_Ultimate_Favicon_Settings_Page {
     */
     public function urlFromFilePath( $file ) {
         if( strpos( $file, ABSPATH ) === 0 ){
-            return site_url( substr( $file, strlen( ABSPATH ) ) );
+            return home_url( substr( $file, strlen( ABSPATH ) ) );
         } else {
             return "not valid";
         }
