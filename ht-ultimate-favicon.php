@@ -4,7 +4,7 @@
 *	Plugin URI: http://wordpress.org/extend/plugins/ht-ultimate-favicon/
 *	Description: The Ultimate Favicon tool for WordPress
 *	Author: Hero Themes
-*	Version: 1.4
+*	Version: 1.4.1
 *	Author URI: http://www.herothemes.com/
 *	Text Domain: ht-ultimate-favicon
 */
