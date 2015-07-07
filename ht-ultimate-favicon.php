@@ -4,7 +4,7 @@
 *	Plugin URI: http://wordpress.org/extend/plugins/ht-ultimate-favicon/
 *	Description: The Ultimate Favicon tool for WordPress
 *	Author: Hero Themes
-*	Version: 1.4.1
+*	Version: 1.4.2
 *	Author URI: http://www.herothemes.com/
 *	Text Domain: ht-ultimate-favicon
 */
@@ -20,13 +20,18 @@ if( !class_exists( 'HT_Ultimate_Favicon' ) ){
 		* Constructor
 		*/
 		function __construct(){
-			load_plugin_textdomain('ht-ultimate-favicon', false, basename( dirname( __FILE__ ) ) . '/languages' );
+			//load plugin textdomain
+			add_action( 'init', array( $this, 'load_textdomain' ) );
 			
 			include_once( 'phpthumb/phpthumb.functions.php' );
 			include_once( 'phpthumb/phpthumb.ico.php' );
 			include_once( 'php/ht-ultimate-favicon-settings.php' );
 			add_action( 'wp_head', array( $this, 'echo_favicons') );
 			
+		}
+
+		function load_textdomain(){
+			load_plugin_textdomain('ht-ultimate-favicon', false, basename( dirname( __FILE__ ) ) . '/languages' );
 		}
 
 		function echo_favicons(){
@@ -37,7 +42,7 @@ if( !class_exists( 'HT_Ultimate_Favicon' ) ){
 				foreach ($favicon_set as $key => $value) {
 					switch($key) {
 						case '152':
-							echo '<link rel="apple-touch-icon-precomposed" href='. $value .'>';
+							echo '<link rel="apple-touch-icon-precomposed" href="'. $value .'">';
 							break;
 						case '144':
 							echo '<meta name="msapplication-TileColor" content="#FFFFFF">';
@@ -185,7 +190,7 @@ if( !class_exists( 'HT_Ultimate_Favicon' ) ){
 		public function move_ico_to_root($ico_file){
 			//copy favicon to root
 			if( !copy($ico_file, ABSPATH . 'favicon.ico') ){
-				HT_Ultimate_Favicon::issue_message('could not copy favicon to root');
+				HT_Ultimate_Favicon::issue_message('Could not copy favicon to root, please check the permissions on your installation');
 			} else {
 				//echo 'copied favicon to root';
 			}
@@ -197,7 +202,7 @@ if( !class_exists( 'HT_Ultimate_Favicon' ) ){
 		public function delete_ico_from_root(){
 			$file = ABSPATH . 'favicon.ico';
 			if( file_exists( $file ) && ! unlink( $file ) ){
-				HT_Ultimate_Favicon::issue_message('could not delete root favicon');
+				HT_Ultimate_Favicon::issue_message('Could not delete root favicon, please check the permissions on your instllation');
 			} else {
 				//echo 'copied favicon to root';
 			}
